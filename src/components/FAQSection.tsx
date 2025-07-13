@@ -32,23 +32,23 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg text-muted-foreground">
             Everything you need to know about Strata and AI-powered skin health analysis.
           </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+            <div key={index} className="border border-border rounded-xl overflow-hidden bg-card">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between"
+                className="w-full px-6 py-4 text-left bg-card hover:bg-muted transition-colors duration-200 flex items-center justify-between"
               >
                 <h3 className="text-lg font-semibold text-foreground pr-4">
                   {faq.question}
@@ -78,7 +78,7 @@ const FAQSection = () => {
           <p className="text-muted-foreground mb-4">
             Still have questions? We're here to help.
           </p>
-          <button className="btn-secondary">
+          <button className="natural-button">
             Contact Support
           </button>
         </div>
