@@ -22,12 +22,12 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="natural-text-gradient">Strata</span> – AI-Powered{' '}
-              <span className="natural-text-gradient">Skin Analysis</span>
+              <span className="natural-text-gradient">Multimodal AI</span> for{' '}
+              <span className="natural-text-gradient">Skin Lesion Analysis</span>
             </h1>
             
             <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              Get instant insights about your skin health through advanced computer vision and medical AI.
+              Advanced mixture of experts model combining dermoscopic imaging, clinical context, and medical expertise for superior diagnostic reasoning.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -47,9 +47,9 @@ const HeroSection = () => {
 
             {/* Simple Trust Indicators */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <span>🔒 Privacy-first design</span>
-              <span>🏥 Medical-grade AI</span>
-              <span>📱 Instant analysis</span>
+              <span>🧠 Mixture of Experts</span>
+              <span>🔬 Clinical Integration</span>
+              <span>📊 Superior Accuracy</span>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src={heroPhoneMockup}
-                alt="Strata AI skin analysis app"
+                alt="Multimodal AI skin lesion analysis system"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-card transition-transform duration-300 hover:scale-105"
               />
             </div>

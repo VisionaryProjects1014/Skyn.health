@@ -1,22 +1,22 @@
 import React from 'react';
-import { Camera, MessageCircle, Brain, Upload, CheckCircle } from 'lucide-react';
+import { Camera, MessageCircle, Brain, Network, Route } from 'lucide-react';
 
 const HowItWorksSection = () => {
   const steps = [
     {
       icon: Camera,
-      title: "Upload your photo",
-      description: "Take a clear photo of your skin concern using your smartphone camera.",
+      title: "Multimodal Input",
+      description: "Upload dermoscopic images and provide clinical context including symptoms and medical history.",
     },
     {
-      icon: MessageCircle,
-      title: "Answer questions",
-      description: "Our AI asks about your symptoms and medical history to understand your situation.",
+      icon: Route,
+      title: "Expert Routing",
+      description: "Our gating mechanism routes your query to specialized experts based on lesion characteristics and clinical features.",
     },
     {
       icon: Brain,
-      title: "Get insights",
-      description: "Receive personalized analysis and recommendations based on medical knowledge.",
+      title: "Comprehensive Analysis",
+      description: "Receive detailed diagnostic insights combining visual analysis, clinical reasoning, and expert medical knowledge.",
     }
   ];
 
@@ -25,10 +25,10 @@ const HowItWorksSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            How It Works
+            MOE Architecture Pipeline
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Simple, secure skin analysis in three steps.
+            Advanced multimodal processing through specialized expert networks.
           </p>
         </div>
 

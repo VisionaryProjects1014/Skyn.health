@@ -6,23 +6,23 @@ const AboutSection = () => {
   const features = [
     {
       icon: Eye,
-      title: "Computer Vision",
-      description: "Advanced image analysis trained on thousands of dermatological cases"
+      title: "Dermoscopic Analysis",
+      description: "Specialized experts trained on clinical, dermoscopic, and pathology images with VLM integration"
     },
     {
       icon: MessageSquare,
-      title: "Natural Language",
-      description: "Conversational AI that understands medical terminology and patient concerns"
+      title: "Clinical Context",
+      description: "Natural language processing for symptoms, medical history, and clinical significance assessment"
     },
     {
       icon: Cpu,
-      title: "Multimodal Intelligence",
-      description: "Combines visual and textual data for comprehensive skin health analysis"
+      title: "Mixture of Experts",
+      description: "Dynamic expert selection with gating mechanisms for optimal accuracy and clinical insights"
     },
     {
       icon: Shield,
-      title: "Privacy First",
-      description: "End-to-end encryption with HIPAA-compliant data handling"
+      title: "Medical Grade",
+      description: "Validated on PAD-UFES20 dataset with superior performance across all diagnostic metrics"
     }
   ];
 
@@ -33,15 +33,15 @@ const AboutSection = () => {
           {/* Left Content */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">
-              AI That Understands Skin
+              Multimodal Mixture of Experts Architecture
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Strata uses computer vision trained on thousands of medical images combined with natural language processing to analyze skin conditions like a dermatologist would.
+              Our system leverages Vision-Language Models (VLMs) within a Mixture of Experts (MOE) framework, routing queries to specialized experts for dermoscopic image analysis and clinical reasoning.
             </p>
 
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our models are trained on diverse datasets and validated by medical professionals to ensure accurate, unbiased insights for all skin types.
+              Achieving superior accuracy through dynamic expert utilization, sparse activation strategies, and comprehensive evaluation on established dermatology datasets with clinical validation.
             </p>
 
             {/* Simplified Features Grid */}
@@ -74,13 +74,13 @@ const AboutSection = () => {
             
             {/* Simple overlays */}
             <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm p-3 rounded-lg border border-border">
-              <div className="text-lg font-bold text-primary">99.2%</div>
-              <div className="text-xs text-muted-foreground">Accuracy</div>
+              <div className="text-lg font-bold text-primary">94.36%</div>
+              <div className="text-xs text-muted-foreground">Recall (All Experts)</div>
             </div>
             
             <div className="absolute bottom-4 left-4 bg-card/90 backdrop-blur-sm p-3 rounded-lg border border-border">
-              <div className="text-lg font-bold text-accent">50K+</div>
-              <div className="text-xs text-muted-foreground">Images</div>
+              <div className="text-lg font-bold text-accent">Top-K</div>
+              <div className="text-xs text-muted-foreground">Gating Strategy</div>
             </div>
           </div>
         </div>
