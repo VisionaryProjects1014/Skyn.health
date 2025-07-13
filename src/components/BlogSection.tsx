@@ -16,7 +16,7 @@ const BlogSection = () => {
     },
     {
       title: "Building Trust in Medical AI",
-      excerpt: "How Strata ensures transparency, accuracy, and ethical standards in AI-powered skin health analysis.",
+      excerpt: "How Skyn.health ensures transparency, accuracy, and ethical standards in AI-powered skin health analysis.",
       image: blogImage2,
       date: "March 10, 2024",
       author: "Prabhav Sanga",
@@ -24,7 +24,7 @@ const BlogSection = () => {
     },
     {
       title: "Computer Vision Meets Healthcare",
-      excerpt: "The technical innovation behind Strata's multimodal AI approach to skin condition analysis and diagnosis.",
+      excerpt: "The technical innovation behind Skyn.health's multimodal AI approach to skin condition analysis and diagnosis.",
       image: blogImage3,
       date: "March 5, 2024",
       author: "Jaskaran Singh",
@@ -37,7 +37,7 @@ const BlogSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            From Lab to Life: How Strata Is Redefining Skin Care
+            From Lab to Life: How Skyn.health Is Redefining Skin Care
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Insights, research, and stories from our journey to democratize 

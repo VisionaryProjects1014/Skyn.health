@@ -6,8 +6,8 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Is Strata a replacement for a doctor?",
-      answer: "No, Strata is designed to complement, not replace, professional medical care. Our AI provides preliminary insights and educational information to help you make informed decisions about when to seek professional dermatological care. Always consult with a healthcare provider for medical advice, diagnosis, or treatment."
+      question: "Is Skyn.health a replacement for a doctor?",
+      answer: "No, Skyn.health is designed to complement, not replace, professional medical care. Our AI provides preliminary insights and educational information to help you make informed decisions about when to seek professional dermatological care. Always consult with a healthcare provider for medical advice, diagnosis, or treatment."
     },
     {
       question: "Is my data private?",
@@ -18,12 +18,12 @@ const FAQSection = () => {
       answer: "Our AI models achieve over 99% accuracy in clinical validation studies, comparable to board-certified dermatologists. However, AI analysis should be considered as a preliminary assessment tool. The accuracy may vary based on image quality, lighting conditions, and the specific skin condition being analyzed."
     },
     {
-      question: "What types of skin conditions can Strata analyze?",
-      answer: "Strata can analyze a wide range of common skin conditions including acne, eczema, psoriasis, moles, rashes, and other dermatological concerns. Our AI is continuously learning and expanding its diagnostic capabilities through ongoing clinical validation studies."
+      question: "What types of skin conditions can Skyn.health analyze?",
+      answer: "Skyn.health can analyze a wide range of common skin conditions including acne, eczema, psoriasis, moles, rashes, and other dermatological concerns. Our AI is continuously learning and expanding its diagnostic capabilities through ongoing clinical validation studies."
     },
     {
-      question: "How much does Strata cost?",
-      answer: "During our beta phase, Strata is free to use. We're committed to making skin health insights accessible to everyone. Future pricing will be transparent and affordable, with options for different usage levels and potential insurance coverage."
+      question: "How much does Skyn.health cost?",
+      answer: "During our beta phase, Skyn.health is free to use. We're committed to making skin health insights accessible to everyone. Future pricing will be transparent and affordable, with options for different usage levels and potential insurance coverage."
     }
   ];
 
@@ -39,7 +39,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about Strata and AI-powered skin health analysis.
+            Everything you need to know about Skyn.health and AI-powered skin health analysis.
           </p>
         </div>
 

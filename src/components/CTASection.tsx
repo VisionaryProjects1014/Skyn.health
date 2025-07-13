@@ -36,7 +36,7 @@ const CTASection = () => {
         
         <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
           Join thousands of early adopters who are already experiencing the future 
-          of personalized skin care with Strata's beta program.
+          of personalized skin care with Skyn.health's beta program.
         </p>
 
         {/* Email Signup Form */}
@@ -70,7 +70,7 @@ const CTASection = () => {
                 </span>
               </div>
               <p className="text-white/80 mt-2">
-                We'll notify you when Strata is ready for you.
+                We'll notify you when Skyn.health is ready for you.
               </p>
             </div>
           )}
@@ -99,7 +99,7 @@ const CTASection = () => {
               <span className="text-2xl font-bold">🚀</span>
             </div>
             <h3 className="font-semibold mb-2">Early Access</h3>
-            <p className="text-sm text-white/80">Be among the first to try Strata's revolutionary AI skin analysis</p>
+            <p className="text-sm text-white/80">Be among the first to try Skyn.health's revolutionary AI skin analysis</p>
           </div>
           
           <div className="text-center">
@@ -115,7 +115,7 @@ const CTASection = () => {
               <span className="text-2xl font-bold">🎯</span>
             </div>
             <h3 className="font-semibold mb-2">Shape the Future</h3>
-            <p className="text-sm text-white/80">Your feedback will directly influence Strata's development</p>
+            <p className="text-sm text-white/80">Your feedback will directly influence Skyn.health's development</p>
           </div>
         </div>
       </div>
