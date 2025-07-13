@@ -2,39 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Strata Healthcare AI Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Strata Color Palette */
+    --primary: 220 96% 64%; /* #4F8EF7 - Primary blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 220 100% 96%; /* #E8F3FF - Soft sky blue */
+    
+    --accent: 172 100% 58%; /* #2DD4BF - Accent teal */
+    --accent-foreground: 0 0% 100%;
+    
+    --background: 36 100% 99%; /* #FDFCFA - Warm white */
+    --foreground: 217 32% 17%; /* #1F2937 - Charcoal gray */
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 217 32% 17%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --popover-foreground: 217 32% 17%;
+    
+    --secondary: 32 23% 91%; /* #F5E6D3 - Gentle skin-safe beige */
+    --secondary-foreground: 217 32% 17%;
+    
+    --muted: 220 13% 97%; /* #F8FAFE - Light blue */
+    --muted-foreground: 220 9% 46%; /* #6B7280 - Medium gray */
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 96% 64%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Strata Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 96% 64%), hsl(172 100% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(36 100% 99%), hsl(220 100% 96%));
+    --gradient-section: linear-gradient(180deg, hsl(220 100% 97%), hsl(220 100% 96%));
+    --gradient-cta: linear-gradient(135deg, hsl(220 96% 64%), hsl(172 100% 58%));
+    
+    /* Strata Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(220 96% 64% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(220 96% 64% / 0.15);
+    --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
+    --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
+    
+    /* Strata Spacing */
+    --section-padding: 5rem;
+    --element-spacing: 2.5rem;
+    
+    /* Strata Radius */
+    --radius: 0.75rem;
+    --radius-lg: 1.25rem;
 
     --radius: 0.5rem;
 
@@ -100,6 +122,75 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Strata Component Styles */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .floating-card {
+    @apply bg-white rounded-lg transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .floating-card:hover {
+    box-shadow: var(--shadow-float);
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 md:px-6 lg:px-8;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 font-medium transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8 py-3 font-medium transition-all duration-300 hover:scale-105;
+  }
+  
+  .navbar-blur {
+    @apply backdrop-blur-md bg-white/80 border-b border-white/20;
   }
 }
