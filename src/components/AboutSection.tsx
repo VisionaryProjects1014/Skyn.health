@@ -27,35 +27,32 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
-              Multimodal Intelligence Built for Skin
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">
+              AI That Understands Skin
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Strata leverages cutting-edge computer vision and natural language processing 
-              to analyze skin conditions with the same comprehensive approach that 
-              dermatologists use – combining visual examination with detailed patient history.
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Strata uses computer vision trained on thousands of medical images combined with natural language processing to analyze skin conditions like a dermatologist would.
             </p>
 
-            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Our AI models are trained on diverse datasets and validated by medical professionals, 
-              ensuring accurate, unbiased, and culturally sensitive skin health insights for everyone.
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Our models are trained on diverse datasets and validated by medical professionals to ensure accurate, unbiased insights for all skin types.
             </p>
 
-            {/* Features Grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            {/* Simplified Features Grid */}
+            <div className="grid sm:grid-cols-2 gap-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-primary" />
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <h3 className="font-semibold text-foreground mb-1">
                       {feature.title}
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -67,29 +64,23 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right Visual */}
+          {/* Right Visual - Simplified */}
           <div className="relative">
-            <div className="relative z-10">
-              <img
-                src={aiVisualization}
-                alt="AI neural network visualization"
-                className="w-full rounded-2xl shadow-float hover-lift"
-              />
+            <img
+              src={aiVisualization}
+              alt="AI neural network visualization"
+              className="w-full rounded-xl shadow-card"
+            />
+            
+            {/* Simple overlays */}
+            <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm p-3 rounded-lg border border-border">
+              <div className="text-lg font-bold text-primary">99.2%</div>
+              <div className="text-xs text-muted-foreground">Accuracy</div>
             </div>
             
-            {/* Decorative Elements */}
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-primary opacity-20 rounded-2xl"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-primary opacity-10 rounded-2xl"></div>
-            
-            {/* Floating Stats */}
-            <div className="absolute top-8 right-8 glass-card p-4 rounded-xl">
-              <div className="text-2xl font-bold text-primary">99.2%</div>
-              <div className="text-sm text-muted-foreground">Accuracy Rate</div>
-            </div>
-            
-            <div className="absolute bottom-8 left-8 glass-card p-4 rounded-xl">
-              <div className="text-2xl font-bold text-accent">50K+</div>
-              <div className="text-sm text-muted-foreground">Images Analyzed</div>
+            <div className="absolute bottom-4 left-4 bg-card/90 backdrop-blur-sm p-3 rounded-lg border border-border">
+              <div className="text-lg font-bold text-accent">50K+</div>
+              <div className="text-xs text-muted-foreground">Images</div>
             </div>
           </div>
         </div>

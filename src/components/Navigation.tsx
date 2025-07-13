@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,9 +64,10 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="btn-primary">
+          {/* CTA Button and Theme Toggle */}
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
+            <button className="natural-button">
               Try Beta
             </button>
           </div>
@@ -84,7 +86,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-soft">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-soft border border-border">
               <button
                 onClick={() => scrollToSection('how-it-works')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary font-medium w-full text-left"
@@ -109,8 +111,9 @@ const Navigation = () => {
               >
                 Contact
               </button>
-              <div className="px-3 py-2">
-                <button className="btn-primary w-full">
+              <div className="px-3 py-2 flex items-center space-x-3">
+                <ThemeToggle />
+                <button className="natural-button flex-1">
                   Try Beta
                 </button>
               </div>

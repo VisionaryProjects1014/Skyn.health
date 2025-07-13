@@ -8,47 +8,47 @@
 
 @layer base {
   :root {
-    /* Strata Color Palette */
+    /* Strata Dark Theme Color Palette */
+    --background: 222 84% 4.9%; /* Dark charcoal background */
+    --foreground: 210 40% 98%; /* Light text */
+    
     --primary: 220 96% 64%; /* #4F8EF7 - Primary blue */
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 222 84% 4.9%;
     --primary-light: 220 100% 96%; /* #E8F3FF - Soft sky blue */
     
     --accent: 172 100% 58%; /* #2DD4BF - Accent teal */
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 222 84% 4.9%;
     
-    --background: 36 100% 99%; /* #FDFCFA - Warm white */
-    --foreground: 217 32% 17%; /* #1F2937 - Charcoal gray */
+    --card: 217 32% 6%; /* Dark card background */
+    --card-foreground: 210 40% 98%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 217 32% 17%;
+    --popover: 217 32% 6%;
+    --popover-foreground: 210 40% 98%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 217 32% 17%;
+    --secondary: 217 32% 17.5%; /* Dark secondary */
+    --secondary-foreground: 210 40% 98%;
     
-    --secondary: 32 23% 91%; /* #F5E6D3 - Gentle skin-safe beige */
-    --secondary-foreground: 217 32% 17%;
+    --muted: 217 32% 8%; /* Dark muted background */
+    --muted-foreground: 215 20% 65%; /* Medium gray text */
     
-    --muted: 220 13% 97%; /* #F8FAFE - Light blue */
-    --muted-foreground: 220 9% 46%; /* #6B7280 - Medium gray */
-    
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 217 32% 17.5%;
+    --input: 217 32% 17.5%;
     --ring: 220 96% 64%;
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
     
-    /* Strata Gradients */
+    /* Strata Gradients - Dark theme */
     --gradient-primary: linear-gradient(135deg, hsl(220 96% 64%), hsl(172 100% 58%));
-    --gradient-hero: linear-gradient(135deg, hsl(36 100% 99%), hsl(220 100% 96%));
-    --gradient-section: linear-gradient(180deg, hsl(220 100% 97%), hsl(220 100% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%), hsl(217 32% 8%));
+    --gradient-section: linear-gradient(180deg, hsl(217 32% 6%), hsl(217 32% 8%));
     --gradient-cta: linear-gradient(135deg, hsl(220 96% 64%), hsl(172 100% 58%));
     
-    /* Strata Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(220 96% 64% / 0.1);
-    --shadow-medium: 0 8px 30px -4px hsl(220 96% 64% / 0.15);
-    --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
-    --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
+    /* Strata Shadows - Adjusted for dark theme */
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px -4px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.2);
+    --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.3);
     
     /* Strata Spacing */
     --section-padding: 5rem;
@@ -57,63 +57,35 @@
     /* Strata Radius */
     --radius: 0.75rem;
     --radius-lg: 1.25rem;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+  .light {
+    /* Light theme overrides */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+    
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 100% 96%));
+    --gradient-section: linear-gradient(180deg, hsl(220 100% 97%), hsl(220 100% 96%));
+    
+    --shadow-soft: 0 4px 20px -2px hsl(220 96% 64% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(220 96% 64% / 0.15);
+    --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
+    --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
 }
 
 @layer base {
@@ -132,7 +104,7 @@
 }
 
 @layer components {
-  /* Strata Component Styles */
+  /* Strata Component Styles - Dark Mode Aware */
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -141,12 +113,12 @@
   }
   
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+    @apply bg-card/80 backdrop-blur-sm border border-border;
     box-shadow: var(--shadow-card);
   }
   
   .floating-card {
-    @apply bg-white rounded-lg transition-all duration-300 hover:scale-105;
+    @apply bg-card rounded-lg transition-all duration-300 hover:scale-105;
     box-shadow: var(--shadow-card);
   }
   
@@ -191,6 +163,23 @@
   }
   
   .navbar-blur {
-    @apply backdrop-blur-md bg-white/80 border-b border-white/20;
+    @apply backdrop-blur-md bg-background/80 border-b border-border;
+  }
+  
+  /* Natural, less fabricated styling */
+  .natural-card {
+    @apply bg-card border border-border/50 rounded-xl;
+    box-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+  }
+  
+  .natural-button {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .natural-text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
