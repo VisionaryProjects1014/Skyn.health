@@ -86,6 +86,7 @@
     --shadow-medium: 0 8px 30px -4px hsl(220 96% 64% / 0.15);
     --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
     --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
+  }
 }
 
 @layer base {
@@ -181,5 +182,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
   }
 }
