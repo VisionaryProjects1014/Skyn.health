@@ -6,56 +6,56 @@ const AboutSection = () => {
   const features = [
     {
       icon: Eye,
-      title: "Dermoscopic Analysis",
-      description: "Specialized experts trained on clinical, dermoscopic, and pathology images with VLM integration"
+      title: "Computer Vision",
+      description: "Advanced image analysis that can identify subtle patterns and changes in skin texture, color, and morphology."
     },
     {
       icon: MessageSquare,
-      title: "Clinical Context",
-      description: "Natural language processing for symptoms, medical history, and clinical significance assessment"
+      title: "Natural Language",
+      description: "Conversational AI that understands medical terminology and asks the right follow-up questions."
     },
     {
       icon: Cpu,
-      title: "Mixture of Experts",
-      description: "Dynamic expert selection with gating mechanisms for optimal accuracy and clinical insights"
+      title: "Clinical Reasoning",
+      description: "Combines visual analysis with symptom assessment to provide comprehensive skin health insights."
     },
     {
       icon: Shield,
-      title: "Medical Grade",
-      description: "Validated on PAD-UFES20 dataset with superior performance across all diagnostic metrics"
+      title: "Privacy-First",
+      description: "Your data stays secure with HIPAA-compliant infrastructure and encrypted processing."
     }
   ];
 
   return (
-    <section id="about" className="section-padding bg-background">
+    <section id="about" className="section-padding bg-card">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">
-              Multimodal Mixture of Experts Architecture
+          <div className="slide-up">
+            <h2 className="section-title text-foreground mb-8">
+              Multimodal Intelligence Built for Skin
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Our system leverages Vision-Language Models (VLMs) within a Mixture of Experts (MOE) framework, routing queries to specialized experts for dermoscopic image analysis and clinical reasoning.
+              Skyn.health combines computer vision and language understanding to mimic clinical reasoning and provide smarter skin insights. Our AI doesn't just look at images - it understands context.
             </p>
 
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Achieving superior accuracy through dynamic expert utilization, sparse activation strategies, and comprehensive evaluation on established dermatology datasets with clinical validation.
+              Built on advanced machine learning that processes both visual information and clinical context, just like a dermatologist would during a consultation.
             </p>
 
-            {/* Simplified Features Grid */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            {/* Features Grid */}
+            <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-5 h-5 text-primary" />
+                <div key={index} className="flex items-start space-x-4 fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">
+                    <h3 className="font-semibold text-foreground mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -64,23 +64,29 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right Visual - Simplified */}
-          <div className="relative">
+          {/* Right Visual */}
+          <div className="relative scale-in">
             <img
               src={aiVisualization}
-              alt="AI neural network visualization"
-              className="w-full rounded-xl shadow-card"
+              alt="Abstract AI network visualization showing Skyn.health's intelligence"
+              className="w-full rounded-xl"
+              style={{boxShadow: 'var(--shadow-card)'}}
             />
             
-            {/* Simple overlays */}
-            <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm p-3 rounded-lg border border-border">
-              <div className="text-lg font-bold text-primary">94.36%</div>
-              <div className="text-xs text-muted-foreground">Recall (All Experts)</div>
+            {/* Performance overlays */}
+            <div className="absolute top-6 right-6 bg-card/95 backdrop-blur-sm p-4 rounded-xl border border-border">
+              <div className="text-xl font-bold text-primary">99.2%</div>
+              <div className="text-sm text-muted-foreground">Accuracy Rate</div>
             </div>
             
-            <div className="absolute bottom-4 left-4 bg-card/90 backdrop-blur-sm p-3 rounded-lg border border-border">
-              <div className="text-lg font-bold text-accent">Top-K</div>
-              <div className="text-xs text-muted-foreground">Gating Strategy</div>
+            <div className="absolute bottom-6 left-6 bg-card/95 backdrop-blur-sm p-4 rounded-xl border border-border">
+              <div className="text-xl font-bold text-medical-green">HIPAA</div>
+              <div className="text-sm text-muted-foreground">Compliant</div>
+            </div>
+            
+            <div className="absolute top-1/2 left-6 bg-card/95 backdrop-blur-sm p-3 rounded-lg border border-border">
+              <div className="text-lg font-bold text-accent">24/7</div>
+              <div className="text-xs text-muted-foreground">Available</div>
             </div>
           </div>
         </div>

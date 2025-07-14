@@ -1,49 +1,54 @@
 import React from 'react';
-import { Camera, MessageCircle, Brain, Network, Route } from 'lucide-react';
+import { Camera, MessageCircle, Brain } from 'lucide-react';
 
 const HowItWorksSection = () => {
   const steps = [
     {
       icon: Camera,
-      title: "Multimodal Input",
-      description: "Upload dermoscopic images and provide clinical context including symptoms and medical history.",
+      title: "Upload your skin photo",
+      description: "Simply take a photo with your smartphone or upload an existing image. Our AI works with standard photos - no special equipment needed."
     },
     {
-      icon: Route,
-      title: "Expert Routing",
-      description: "Our gating mechanism routes your query to specialized experts based on lesion characteristics and clinical features.",
+      icon: MessageCircle,
+      title: "Answer symptom questions", 
+      description: "Share context about what you're experiencing. Our chatbot asks targeted questions about symptoms, duration, and relevant history."
     },
     {
       icon: Brain,
-      title: "Comprehensive Analysis",
-      description: "Receive detailed diagnostic insights combining visual analysis, clinical reasoning, and expert medical knowledge.",
+      title: "Get AI-powered insights",
+      description: "Receive personalized insights from our multimodal AI that combines visual analysis with your clinical context for comprehensive guidance."
     }
   ];
 
   return (
-    <section id="how-it-works" className="section-padding bg-gradient-section">
+    <section id="how-it-works" className="section-padding" style={{background: 'var(--gradient-soft)'}}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            MOE Architecture Pipeline
+        <div className="text-center mb-16 slide-up">
+          <h2 className="section-title text-foreground mb-6">
+            How It Works
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Advanced multimodal processing through specialized expert networks.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Three simple steps to get smarter insights about your skin health using our advanced AI technology.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="natural-card p-8 text-center h-full">
-                {/* Step Number */}
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg mb-6 mx-auto">
+            <div key={index} className="relative fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+              {/* Connection line for desktop */}
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-20 left-full w-8 h-0.5 bg-primary/20 z-10 transform translate-x-4"></div>
+              )}
+              
+              <div className="feature-card text-center h-full bg-card">
+                {/* Step number */}
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-white font-bold text-xl" style={{background: 'var(--gradient-primary)'}}>
                   {index + 1}
                 </div>
 
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mb-6 transition-all duration-300">
-                  <step.icon className="w-8 h-8 text-primary" />
+                <div className="mb-6">
+                  <step.icon className="w-12 h-12 text-primary mx-auto" />
                 </div>
 
                 {/* Content */}
@@ -58,9 +63,14 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        {/* Simple CTA */}
         <div className="text-center mt-16">
-          <button className="natural-button text-lg px-8 py-3">
+          <button 
+            onClick={() => {
+              const section = document.getElementById('contact');
+              if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="btn-primary"
+          >
             Get Started
           </button>
         </div>

@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'navbar-blur shadow-soft' : 'bg-transparent'
+      isScrolled ? 'navbar-blur' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -39,25 +39,25 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               <button
                 onClick={() => scrollToSection('how-it-works')}
-                className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
               >
                 How It Works
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('blog')}
-                className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
               >
                 Blog
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
               >
                 Contact
               </button>
@@ -67,16 +67,20 @@ const Navigation = () => {
           {/* CTA Button and Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <button className="natural-button">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="btn-primary"
+            >
               Try Beta
             </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-muted-foreground hover:text-primary p-2"
+              className="text-muted-foreground hover:text-foreground p-2"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -86,34 +90,36 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-soft border border-border">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card/95 backdrop-blur-md rounded-lg mt-2 border border-border">
               <button
                 onClick={() => scrollToSection('how-it-works')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary font-medium w-full text-left"
+                className="block px-3 py-3 text-muted-foreground hover:text-foreground font-medium w-full text-left min-h-[44px]"
               >
                 How It Works
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary font-medium w-full text-left"
+                className="block px-3 py-3 text-muted-foreground hover:text-foreground font-medium w-full text-left min-h-[44px]"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('blog')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary font-medium w-full text-left"
+                className="block px-3 py-3 text-muted-foreground hover:text-foreground font-medium w-full text-left min-h-[44px]"
               >
                 Blog
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary font-medium w-full text-left"
+                className="block px-3 py-3 text-muted-foreground hover:text-foreground font-medium w-full text-left min-h-[44px]"
               >
                 Contact
               </button>
-              <div className="px-3 py-2 flex items-center space-x-3">
-                <ThemeToggle />
-                <button className="natural-button flex-1">
+              <div className="px-3 py-2">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="btn-primary w-full min-h-[48px]"
+                >
                   Try Beta
                 </button>
               </div>

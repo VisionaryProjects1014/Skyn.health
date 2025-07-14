@@ -8,16 +8,66 @@
 
 @layer base {
   :root {
-    /* Strata Dark Theme Color Palette */
+    /* Skyn.health Premium Color Palette - Light Mode Default */
+    --background: 39 43% 97%; /* #FDFCFA - Warm White */
+    --foreground: 214 32% 16%; /* #1F2937 - Dark headings */
+    
+    --primary: 215 86% 65%; /* #4F8EF7 - Primary Blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 100% 96%; /* #E8F3FF - Secondary Blue */
+    
+    --accent: 172 77% 57%; /* #2DD4BF - Accent Teal */
+    --accent-foreground: 0 0% 100%;
+    
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 214 32% 16%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 32% 16%;
+    
+    --secondary: 220 14% 96%; /* #F8FAFE - Soft Gray */
+    --secondary-foreground: 214 32% 16%;
+    
+    --muted: 220 14% 96%; /* #F8FAFE - Section backgrounds */
+    --muted-foreground: 215 16% 47%; /* #6B7280 - Body text */
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 86% 65%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Medical accent colors */
+    --medical-green: 142 76% 36%; /* #10B981 - Trust indicators */
+    --skin-beige: 33 44% 89%; /* #F5E6D3 - Skin Safe Beige */
+    
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 86% 65%) 0%, hsl(172 77% 57%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(215 100% 96%) 0%, hsl(220 100% 97%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(39 43% 97%), hsl(220 14% 96%));
+    --gradient-cta: linear-gradient(135deg, hsl(215 86% 65%) 0%, hsl(172 77% 57%) 100%);
+    
+    /* Professional Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(215 86% 65% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(215 86% 65% / 0.15);
+    --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
+    --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
+    --shadow-xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    
+    /* Spacing System */
+    --section-padding: 5rem;
+    --element-spacing: 2.5rem;
+    
+    /* Border Radius */
+    --radius: 0.75rem;
+    --radius-lg: 1.25rem;
+  }
+
+  .dark {
+    /* Dark theme overrides */
     --background: 222 84% 4.9%; /* Dark charcoal background */
     --foreground: 210 40% 98%; /* Light text */
-    
-    --primary: 220 96% 64%; /* #4F8EF7 - Primary blue */
-    --primary-foreground: 222 84% 4.9%;
-    --primary-light: 220 100% 96%; /* #E8F3FF - Soft sky blue */
-    
-    --accent: 172 100% 58%; /* #2DD4BF - Accent teal */
-    --accent-foreground: 222 84% 4.9%;
     
     --card: 217 32% 6%; /* Dark card background */
     --card-foreground: 210 40% 98%;
@@ -33,59 +83,14 @@
     
     --border: 217 32% 17.5%;
     --input: 217 32% 17.5%;
-    --ring: 220 96% 64%;
     
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    
-    /* Strata Gradients - Dark theme */
-    --gradient-primary: linear-gradient(135deg, hsl(220 96% 64%), hsl(172 100% 58%));
     --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%), hsl(217 32% 8%));
-    --gradient-section: linear-gradient(180deg, hsl(217 32% 6%), hsl(217 32% 8%));
-    --gradient-cta: linear-gradient(135deg, hsl(220 96% 64%), hsl(172 100% 58%));
+    --gradient-soft: linear-gradient(180deg, hsl(217 32% 6%), hsl(217 32% 8%));
     
-    /* Strata Shadows - Adjusted for dark theme */
     --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 8px 30px -4px hsl(0 0% 0% / 0.4);
     --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.2);
     --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.3);
-    
-    /* Strata Spacing */
-    --section-padding: 5rem;
-    --element-spacing: 2.5rem;
-    
-    /* Strata Radius */
-    --radius: 0.75rem;
-    --radius-lg: 1.25rem;
-  }
-
-  .light {
-    /* Light theme overrides */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
-    
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
-    
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-    
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 100% 96%));
-    --gradient-section: linear-gradient(180deg, hsl(220 100% 97%), hsl(220 100% 96%));
-    
-    --shadow-soft: 0 4px 20px -2px hsl(220 96% 64% / 0.1);
-    --shadow-medium: 0 8px 30px -4px hsl(220 96% 64% / 0.15);
-    --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
-    --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
   }
 }
 
@@ -105,48 +110,101 @@
 }
 
 @layer components {
-  /* Strata Component Styles - Dark Mode Aware */
+  /* Skyn.health Premium Component System */
+  
+  /* Typography */
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 700;
   }
   
-  .glass-card {
-    @apply bg-card/80 backdrop-blur-sm border border-border;
+  .hero-title {
+    @apply text-4xl sm:text-5xl lg:text-7xl font-bold leading-none tracking-tight;
+  }
+  
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight;
+  }
+  
+  .subsection-title {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight;
+  }
+  
+  /* Cards */
+  .premium-card {
+    @apply bg-card rounded-xl border border-border/50 transition-all duration-300;
     box-shadow: var(--shadow-card);
   }
   
-  .floating-card {
-    @apply bg-card rounded-lg transition-all duration-300 hover:scale-105;
-    box-shadow: var(--shadow-card);
-  }
-  
-  .floating-card:hover {
+  .premium-card:hover {
+    @apply -translate-y-1;
     box-shadow: var(--shadow-float);
   }
   
+  .feature-card {
+    @apply bg-card rounded-xl p-6 border border-border/50 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .feature-card:hover {
+    @apply scale-102;
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-4 font-semibold text-lg transition-all duration-300 hover:scale-102;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8 py-4 font-semibold text-lg transition-all duration-300 hover:scale-102;
+  }
+  
+  .btn-cta {
+    background: var(--gradient-primary);
+    @apply text-white rounded-full px-10 py-4 font-semibold text-lg transition-all duration-300 hover:scale-102;
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .btn-cta:hover {
+    box-shadow: var(--shadow-float);
+  }
+  
+  /* Navigation */
+  .navbar-blur {
+    @apply backdrop-blur-lg bg-background/95 border-b border-border;
+  }
+  
+  /* Sections */
   .section-padding {
-    @apply py-20 px-4 md:px-6 lg:px-8;
+    @apply py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8;
   }
   
-  .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
-  }
-  
-  .pulse-animation {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-  
+  /* Animations */
   .fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
   }
   
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -154,33 +212,34 @@
     }
   }
   
-  .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 font-medium transition-all duration-300 hover:scale-105;
-    box-shadow: var(--shadow-soft);
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
-  .btn-secondary {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8 py-3 font-medium transition-all duration-300 hover:scale-105;
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
   
-  .navbar-blur {
-    @apply backdrop-blur-md bg-background/80 border-b border-border;
+  /* Responsive utilities */
+  .scale-102 {
+    transform: scale(1.02);
   }
   
-  /* Natural, less fabricated styling */
-  .natural-card {
-    @apply bg-card border border-border/50 rounded-xl;
-    box-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
-  }
-  
-  .natural-button {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 rounded-lg font-medium transition-all duration-200;
-  }
-  
-  .natural-text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .text-shadow {
+    text-shadow: 0 2px 4px hsl(0 0% 0% / 0.1);
   }
 }
