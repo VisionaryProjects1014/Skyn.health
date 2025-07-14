@@ -67,12 +67,14 @@ const Navigation = () => {
           {/* CTA Button and Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <a 
+              href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
             >
-              Try Beta
-            </button>
+              Check your skin's health
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -116,12 +118,14 @@ const Navigation = () => {
                 Contact
               </button>
               <div className="px-3 py-2">
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="btn-primary w-full min-h-[48px]"
+                <a 
+                  href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full min-h-[48px] text-center inline-block leading-[48px]"
                 >
-                  Try Beta
-                </button>
+                  Check your skin's health
+                </a>
               </div>
             </div>
           </div>
