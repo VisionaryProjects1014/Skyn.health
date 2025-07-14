@@ -71,9 +71,9 @@ const Navigation = () => {
               href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary text-sm px-4 py-2"
             >
-              Check your skin's health
+              Skin in Check
             </a>
           </div>
 
@@ -122,9 +122,9 @@ const Navigation = () => {
                   href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full min-h-[48px] text-center inline-block leading-[48px]"
+                  className="btn-primary w-full min-h-[44px] text-center inline-block leading-[44px] text-sm"
                 >
-                  Check your skin's health
+                  Skin in Check
                 </a>
               </div>
             </div>
