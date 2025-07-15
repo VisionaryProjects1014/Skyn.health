@@ -75,14 +75,14 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
     
-    --secondary: 33 28% 25%;    /* Darker Warm Beige */
+    --secondary: 210 15% 20%;   /* Dark Blue-Gray */
     --secondary-foreground: 0 0% 95%;
     
-    --muted: 33 28% 25%;
+    --muted: 210 15% 20%;
     --muted-foreground: 218 11% 65%;
     
-    --border: 33 28% 25%;
-    --input: 33 28% 25%;
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
     
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 12%), hsl(210 15% 20%));
     --gradient-soft: linear-gradient(180deg, hsl(0 0% 8%), hsl(210 15% 15%));
