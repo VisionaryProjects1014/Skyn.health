@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Calendar, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import blogImage1 from '../assets/blog-image-1.jpg';
 import blogImage2 from '../assets/blog-image-2.jpg';
 import blogImage3 from '../assets/blog-image-3.jpg';
@@ -89,10 +90,13 @@ const BlogSection = () => {
                   <span className="text-sm text-muted-foreground">
                     {article.readTime}
                   </span>
-                  <button className="flex items-center space-x-1 text-primary hover:text-accent transition-colors duration-200 group">
+                  <Link 
+                    to="/blog" 
+                    className="flex items-center space-x-1 text-primary hover:text-accent transition-colors duration-200 group"
+                  >
                     <span className="font-medium">Read More</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>
@@ -101,9 +105,9 @@ const BlogSection = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <button className="btn-secondary text-lg px-8 py-3">
+          <Link to="/blog" className="btn-secondary text-lg px-8 py-3 inline-block">
             View All Articles
-          </button>
+          </Link>
         </div>
       </div>
     </section>
