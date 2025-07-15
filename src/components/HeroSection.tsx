@@ -51,7 +51,7 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-12 text-sm font-medium">
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 text-sm font-medium">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-primary rounded-full"></div>
                 <span className="text-muted-foreground">Medical AI</span>
