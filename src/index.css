@@ -4,12 +4,12 @@
 
 /* Skyn.health AI Design System */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display:wght@400&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Strata Color Palette - HSL Values */
-    --background: 39 47% 96%;  /* Light Sand #F6EFE7 */
+    /* Clean Strata Color Palette - HSL Values */
+    --background: 0 0% 100%;   /* Pure White #FFFFFF */
     --foreground: 0 0% 20%;    /* Charcoal Gray #333333 */
     
     --primary: 216 61% 58%;    /* Sky Blue #4A90E2 */
@@ -25,14 +25,14 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
     
-    --secondary: 33 28% 73%;   /* Warm Beige #DCC7AA */
+    --secondary: 210 15% 96%;  /* Very Light Blue-Gray */
     --secondary-foreground: 0 0% 20%;
     
-    --muted: 33 28% 73%;       /* Warm Beige #DCC7AA */
+    --muted: 210 15% 96%;      /* Very Light Blue-Gray */
     --muted-foreground: 218 11% 65%; /* Cool Gray #8D99AE */
     
-    --border: 33 28% 85%;
-    --input: 33 28% 85%;
+    --border: 210 15% 90%;
+    --input: 210 15% 96%;
     --ring: 216 61% 58%;
     
     --destructive: 0 84% 60%;
@@ -42,10 +42,10 @@
     --highlight: 11 73% 79%;     /* Coral Tint #F6A89E */
     --medical-green: 142 76% 36%;
     
-    /* Strata Gradients */
+    /* Clean Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
-    --gradient-soft: linear-gradient(135deg, hsl(39 47% 96%) 0%, hsl(33 28% 90%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(39 47% 96%), hsl(33 28% 90%));
+    --gradient-soft: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
     
     /* Professional Shadows */
@@ -84,8 +84,8 @@
     --border: 33 28% 25%;
     --input: 33 28% 25%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 12%), hsl(33 28% 15%));
-    --gradient-soft: linear-gradient(180deg, hsl(0 0% 8%), hsl(33 28% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 12%), hsl(210 15% 20%));
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 8%), hsl(210 15% 15%));
     
     --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 8px 30px -4px hsl(0 0% 0% / 0.4);

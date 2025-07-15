@@ -30,7 +30,7 @@ const FoundersSection = () => {
   return (
     <section className="section-padding" style={{background: 'linear-gradient(180deg, hsl(var(--card)), hsl(var(--secondary)))'}}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 slide-up">
+        <div className="text-center mb-16 fade-in-on-scroll">
           <h2 className="section-title text-foreground mb-6">
             Why We Built Skyn.health
           </h2>
@@ -41,7 +41,7 @@ const FoundersSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {founders.map((founder, index) => (
-            <div key={index} className="premium-card p-8 text-center bg-card fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+            <div key={index} className="premium-card p-8 text-center bg-card scale-in-on-scroll" style={{transitionDelay: `${index * 0.2}s`}}>
               {/* Profile Image */}
               <img
                 src={founder.image}
@@ -68,7 +68,7 @@ const FoundersSection = () => {
 
         {/* Mission Statement */}
         <div className="mt-20 text-center">
-          <div className="premium-card p-8 max-w-4xl mx-auto bg-card scale-in">
+          <div className="premium-card p-8 max-w-4xl mx-auto bg-card scale-in-on-scroll">
             <h3 className="subsection-title text-foreground mb-6">Our Mission</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               To democratize access to quality dermatological insights through responsible AI development, 

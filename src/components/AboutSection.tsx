@@ -67,7 +67,7 @@ const AboutSection = () => {
           </div>
 
           {/* Right Visual */}
-          <div className="relative scale-in">
+          <div className="relative scale-in-on-scroll">
             <img
               src={aiVisualization}
               alt="Abstract AI network visualization showing Skyn.health's intelligence"
