@@ -20,6 +20,9 @@ export default {
 		extend: {
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
+				'heading': ['Poppins', 'sans-serif'],
+				'serif': ['DM Serif Display', 'serif'],
+				'cursive': ['Dancing Script', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

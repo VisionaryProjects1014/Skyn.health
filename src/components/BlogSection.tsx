@@ -3,8 +3,10 @@ import { ArrowRight, Calendar, User } from 'lucide-react';
 import blogImage1 from '../assets/blog-image-1.jpg';
 import blogImage2 from '../assets/blog-image-2.jpg';
 import blogImage3 from '../assets/blog-image-3.jpg';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const BlogSection = () => {
+  useScrollAnimation();
   const articles = [
     {
       title: "The Future of AI in Dermatology",

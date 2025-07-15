@@ -1,7 +1,9 @@
 import React from 'react';
 import { Camera, MessageCircle, Brain } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const HowItWorksSection = () => {
+  useScrollAnimation();
   const steps = [
     {
       icon: Camera,
@@ -23,18 +25,18 @@ const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className="section-padding" style={{background: 'var(--gradient-soft)'}}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 slide-up">
-          <h2 className="section-title text-foreground mb-6">
+        <div className="text-center mb-16 fade-in-on-scroll">
+          <h2 className="section-title text-foreground mb-6 font-heading">
             How It Works
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="body-text text-muted-foreground max-w-3xl mx-auto">
             Three simple steps to get smarter insights about your skin health using our advanced AI technology.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="relative fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+            <div key={index} className="relative scale-in-on-scroll"  style={{transitionDelay: `${index * 0.2}s`}}>
               {/* Connection line for desktop */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-20 left-full w-8 h-0.5 bg-primary/20 z-10 transform translate-x-4"></div>

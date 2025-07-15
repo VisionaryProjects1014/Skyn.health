@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, CheckCircle } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const CTASection = () => {
+  useScrollAnimation();
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 

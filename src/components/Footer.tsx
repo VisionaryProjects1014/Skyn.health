@@ -15,10 +15,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold natural-text-gradient mb-4">Skyn.health</h3>
+            <h3 className="text-2xl font-bold gradient-text mb-4">Strata</h3>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Revolutionizing skin health through AI-powered diagnosis and personalized care. 
-              Making dermatological insights accessible to everyone, everywhere.
+              Next generation foundational model for dermatology. Revolutionizing skin health 
+              through AI-powered diagnosis and personalized care.
             </p>
             
             {/* Social Links */}
@@ -147,10 +147,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Skyn.health AI. All rights reserved.
+            © 2024 Strata AI. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <span className="text-muted-foreground text-sm">Made with ❤️ for better skin health</span>
+            <span className="font-cursive text-2xl text-primary/70">Skyn</span>
           </div>
         </div>
       </div>

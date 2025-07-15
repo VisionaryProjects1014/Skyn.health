@@ -8,49 +8,49 @@
 
 @layer base {
   :root {
-    /* Skyn.health Premium Color Palette - Light Mode Default */
-    --background: 39 43% 97%; /* #FDFCFA - Warm White */
-    --foreground: 214 32% 16%; /* #1F2937 - Dark headings */
+    /* Strata Color Palette - HSL Values */
+    --background: 39 47% 96%;  /* Light Sand #F6EFE7 */
+    --foreground: 0 0% 20%;    /* Charcoal Gray #333333 */
     
-    --primary: 215 86% 65%; /* #4F8EF7 - Primary Blue */
+    --primary: 216 61% 58%;    /* Sky Blue #4A90E2 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 215 100% 96%; /* #E8F3FF - Secondary Blue */
+    --primary-light: 216 61% 90%;
     
-    --accent: 172 77% 57%; /* #2DD4BF - Accent Teal */
-    --accent-foreground: 0 0% 100%;
+    --accent: 164 46% 76%;     /* Soft Teal #7ED6C1 */
+    --accent-foreground: 0 0% 20%;
     
-    --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 214 32% 16%;
+    --card: 0 0% 100%;         /* Pure White #FFFFFF */
+    --card-foreground: 0 0% 20%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 214 32% 16%;
+    --popover-foreground: 0 0% 20%;
     
-    --secondary: 220 14% 96%; /* #F8FAFE - Soft Gray */
-    --secondary-foreground: 214 32% 16%;
+    --secondary: 33 28% 73%;   /* Warm Beige #DCC7AA */
+    --secondary-foreground: 0 0% 20%;
     
-    --muted: 220 14% 96%; /* #F8FAFE - Section backgrounds */
-    --muted-foreground: 215 16% 47%; /* #6B7280 - Body text */
+    --muted: 33 28% 73%;       /* Warm Beige #DCC7AA */
+    --muted-foreground: 218 11% 65%; /* Cool Gray #8D99AE */
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 215 86% 65%;
+    --border: 33 28% 85%;
+    --input: 33 28% 85%;
+    --ring: 216 61% 58%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Medical accent colors */
-    --medical-green: 142 76% 36%; /* #10B981 - Trust indicators */
-    --skin-beige: 33 44% 89%; /* #F5E6D3 - Skin Safe Beige */
+    /* Special accent colors */
+    --highlight: 11 73% 79%;     /* Coral Tint #F6A89E */
+    --medical-green: 142 76% 36%;
     
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 86% 65%) 0%, hsl(172 77% 57%) 100%);
-    --gradient-soft: linear-gradient(135deg, hsl(215 100% 96%) 0%, hsl(220 100% 97%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(39 43% 97%), hsl(220 14% 96%));
-    --gradient-cta: linear-gradient(135deg, hsl(215 86% 65%) 0%, hsl(172 77% 57%) 100%);
+    /* Strata Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(39 47% 96%) 0%, hsl(33 28% 90%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(39 47% 96%), hsl(33 28% 90%));
+    --gradient-cta: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
     
     /* Professional Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(215 86% 65% / 0.1);
-    --shadow-medium: 0 8px 30px -4px hsl(215 86% 65% / 0.15);
+    --shadow-soft: 0 4px 20px -2px hsl(216 61% 58% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(216 61% 58% / 0.15);
     --shadow-card: 0 2px 20px -2px hsl(0 0% 0% / 0.08);
     --shadow-float: 0 10px 40px -8px hsl(0 0% 0% / 0.12);
     --shadow-xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
@@ -66,26 +66,26 @@
 
   .dark {
     /* Dark theme overrides */
-    --background: 222 84% 4.9%; /* Dark charcoal background */
-    --foreground: 210 40% 98%; /* Light text */
+    --background: 0 0% 12%;     /* Dark background */
+    --foreground: 0 0% 95%;     /* Light text */
     
-    --card: 217 32% 6%; /* Dark card background */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
     
-    --popover: 217 32% 6%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
     
-    --secondary: 217 32% 17.5%; /* Dark secondary */
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 33 28% 25%;    /* Darker Warm Beige */
+    --secondary-foreground: 0 0% 95%;
     
-    --muted: 217 32% 8%; /* Dark muted background */
-    --muted-foreground: 215 20% 65%; /* Medium gray text */
+    --muted: 33 28% 25%;
+    --muted-foreground: 218 11% 65%;
     
-    --border: 217 32% 17.5%;
-    --input: 217 32% 17.5%;
+    --border: 33 28% 25%;
+    --input: 33 28% 25%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%), hsl(217 32% 8%));
-    --gradient-soft: linear-gradient(180deg, hsl(217 32% 6%), hsl(217 32% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 12%), hsl(33 28% 15%));
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 8%), hsl(33 28% 15%));
     
     --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 8px 30px -4px hsl(0 0% 0% / 0.4);
@@ -112,7 +112,7 @@
 @layer components {
   /* Skyn.health Premium Component System */
   
-  /* Typography */
+  /* Typography - Strata Font System */
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -122,15 +122,27 @@
   }
   
   .hero-title {
-    @apply text-4xl sm:text-5xl lg:text-7xl font-bold leading-none tracking-tight;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-none tracking-tight;
   }
   
   .section-title {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-heading font-semibold leading-tight tracking-tight;
   }
   
   .subsection-title {
-    @apply text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight;
+    @apply text-lg sm:text-xl lg:text-2xl font-inter font-medium leading-tight;
+  }
+
+  .blog-title {
+    @apply text-xl sm:text-2xl font-serif font-normal leading-tight;
+  }
+
+  .body-text {
+    @apply text-base sm:text-lg font-inter font-normal leading-relaxed;
+  }
+
+  .button-text {
+    @apply text-sm sm:text-base font-inter font-semibold;
   }
   
   /* Cards */
@@ -188,7 +200,52 @@
     @apply py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8;
   }
   
-  /* Animations */
+  /* Scroll Animations - Strata Style */
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scale-in-on-scroll {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scale-in-on-scroll.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Legacy animations for immediate load */
   .fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }

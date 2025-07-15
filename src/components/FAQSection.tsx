@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const FAQSection = () => {
+  useScrollAnimation();
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
 
   const faqs = [
