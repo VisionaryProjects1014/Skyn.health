@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
-import { Mail, CheckCircle } from 'lucide-react';
+import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { api } from '../lib/api';
 
 const CTASection = () => {
   useScrollAnimation();
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      // Here you would typically send the email to your backend
+    if (!email) return;
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      await api.subscribeNewsletter({ email });
       setIsSubmitted(true);
       setEmail('');
       
@@ -18,6 +26,11 @@ const CTASection = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 3000);
+    } catch (err) {
+      setError('Failed to subscribe. Please try again.');
+      console.error('Newsletter subscription error:', err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -54,70 +67,47 @@ const CTASection = () => {
                   placeholder="Enter your email address"
                   className="w-full pl-12 pr-4 py-3 rounded-full border-0 focus:outline-none focus:ring-4 focus:ring-white/20 text-foreground"
                   required
+                  disabled={isLoading}
                 />
               </div>
               <button
                 type="submit"
-                className="bg-white text-primary font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200 hover:scale-105 transform"
+                disabled={isLoading}
+                className="bg-white text-primary font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200 hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Join the Waitlist
+                {isLoading ? 'Joining...' : 'Join the Waitlist'}
               </button>
             </form>
           ) : (
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex items-center justify-center space-x-3 text-white">
-                <CheckCircle className="w-6 h-6 text-green-400" />
-                <span className="text-lg font-medium">
-                  Thank you! You're on the waitlist.
-                </span>
-              </div>
-              <p className="text-white/80 mt-2">
-                We'll notify you when Skyn.health is ready for you.
-              </p>
+            <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 flex items-center justify-center gap-3">
+              <CheckCircle className="w-6 h-6 text-white" />
+              <span className="text-white font-semibold">
+                Welcome aboard! You're on the waitlist.
+              </span>
+            </div>
+          )}
+          
+          {error && (
+            <div className="mt-4 bg-red-500/20 backdrop-blur-sm rounded-full p-4 flex items-center justify-center gap-3">
+              <AlertCircle className="w-5 h-5 text-white" />
+              <span className="text-white">{error}</span>
             </div>
           )}
         </div>
 
-        {/* Trust Badges */}
-        <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/80">
-          <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-            <span className="text-sm">No spam, ever</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-            <span className="text-sm">Unsubscribe anytime</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-            <span className="text-sm">HIPAA compliant</span>
-          </div>
-        </div>
-
-        {/* Beta Benefits */}
-        <div className="mt-16 grid sm:grid-cols-3 gap-6 text-white">
+        {/* Statistics */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold">🚀</span>
-            </div>
-            <h3 className="font-semibold mb-2">Early Access</h3>
-            <p className="text-sm text-white/80">Be among the first to try Skyn.health's revolutionary AI skin analysis</p>
+            <div className="text-3xl font-bold text-white mb-2">10,000+</div>
+            <div className="text-white/80">Beta Users</div>
           </div>
-          
           <div className="text-center">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold">💝</span>
-            </div>
-            <h3 className="font-semibold mb-2">Free Beta</h3>
-            <p className="text-sm text-white/80">Full access to all features during the beta period at no cost</p>
+            <div className="text-3xl font-bold text-white mb-2">99%</div>
+            <div className="text-white/80">Accuracy Rate</div>
           </div>
-          
           <div className="text-center">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold">🎯</span>
-            </div>
-            <h3 className="font-semibold mb-2">Shape the Future</h3>
-            <p className="text-sm text-white/80">Your feedback will directly influence Skyn.health's development</p>
+            <div className="text-3xl font-bold text-white mb-2">24/7</div>
+            <div className="text-white/80">AI Availability</div>
           </div>
         </div>
       </div>
