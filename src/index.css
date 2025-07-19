@@ -8,89 +8,58 @@
 
 @layer base {
   :root {
-    /* Clean Skyn.health Color Palette - HSL Values */
-    --background: 0 0% 100%;   /* Pure White #FFFFFF */
-    --foreground: 0 0% 20%;    /* Charcoal Gray #333333 */
+    /* Dark Mode as Default - Skyn.health Color Palette */
+    --background: 222.2 84% 4.9%;    /* Dark Background */
+    --foreground: 210 40% 98%;       /* Light Text */
     
-    --primary: 216 61% 58%;    /* Sky Blue #4A90E2 */
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 216 61% 90%;
+    --primary: 216 61% 58%;          /* Sky Blue #4A90E2 */
+    --primary-foreground: 210 40% 98%;
     
-    --accent: 164 46% 76%;     /* Soft Teal #7ED6C1 */
+    --secondary: 217.2 32.6% 17.5%;  /* Dark Gray */
+    --secondary-foreground: 210 40% 98%;
+    
+    --accent: 164 46% 76%;           /* Mint Green #7ED6C1 */
     --accent-foreground: 0 0% 20%;
     
-    --card: 0 0% 100%;         /* Pure White #FFFFFF */
-    --card-foreground: 0 0% 20%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
-    
-    --secondary: 210 15% 96%;  /* Very Light Blue-Gray */
-    --secondary-foreground: 0 0% 20%;
-    
-    --muted: 210 15% 96%;      /* Very Light Blue-Gray */
-    --muted-foreground: 218 11% 65%; /* Cool Gray #8D99AE */
-    
-    --border: 210 15% 90%;
-    --input: 210 15% 96%;
-    --ring: 216 61% 58%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    /* Special accent colors */
-    --highlight: 11 73% 79%;     /* Coral Tint #F6A89E */
-    --medical-green: 142 76% 36%;
-    
-    /* Clean Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
-    --gradient-soft: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
-    
-    /* Professional Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(216 61% 58% / 0.1);
-    --shadow-medium: 0 8px 30px -4px hsl(216 61% 58% / 0.15);
-    --shadow-strong: 0 16px 40px -8px hsl(216 61% 58% / 0.2);
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 84% 4.9%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
+    
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 216 61% 58%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(216 61% 58%) 0%, hsl(164 46% 76%) 50%, hsl(216 61% 58%) 100%);
+    
+    /* Shadow System */
+    --shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.12);
+    --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.18);
+    --shadow-strong: 0 16px 64px rgba(0, 0, 0, 0.24);
   }
-}
-
-@layer base {
+  
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
