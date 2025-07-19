@@ -1,7 +1,7 @@
 import React from 'react';
 import prabhavSanga from '../assets/prabhav-sanga.jpg';
 import jaskaranSingh from '../assets/jaskaran-singh.jpg';
-import sumukhDev from '../assets/sumukh-dev.jpg';
+import sumukhDev from '../assets/sumukh-dev.jpeg';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const FoundersSection = () => {
