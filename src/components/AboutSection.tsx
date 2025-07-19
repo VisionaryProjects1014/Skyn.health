@@ -53,7 +53,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="premium-card p-8 bg-card scale-in-on-scroll" style={{transitionDelay: `${index * 0.1}s`}}>
-              <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-300">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">{feature.title}</h3>

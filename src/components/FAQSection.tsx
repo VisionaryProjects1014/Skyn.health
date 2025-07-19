@@ -34,23 +34,23 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-secondary/30">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16 fade-in-on-scroll">
+          <h2 className="section-title text-foreground mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
             Everything you need to know about Skyn.health and AI-powered skin health analysis.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 fade-in-on-scroll">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-border rounded-xl overflow-hidden bg-card">
+            <div key={index} className="premium-card bg-card border border-border/50 shadow-sm">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left bg-card hover:bg-muted transition-colors duration-200 flex items-center justify-between"
+                className="w-full px-6 py-5 text-left hover:bg-secondary/50 transition-colors duration-200 flex items-center justify-between rounded-xl"
               >
                 <h3 className="text-lg font-semibold text-foreground pr-4">
                   {faq.question}
@@ -58,15 +58,15 @@ const FAQSection = () => {
                 {openFAQ === index ? (
                   <ChevronUp className="w-5 h-5 text-primary flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-foreground/60 flex-shrink-0" />
                 )}
               </button>
               
               <div className={`overflow-hidden transition-all duration-300 ${
                 openFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}>
-                <div className="px-6 pb-4">
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="px-6 pb-5 pt-2">
+                  <p className="text-foreground/80 leading-relaxed text-base">
                     {faq.answer}
                   </p>
                 </div>
@@ -76,11 +76,11 @@ const FAQSection = () => {
         </div>
 
         {/* Additional Support */}
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-4">
+        <div className="mt-16 text-center fade-in-on-scroll">
+          <p className="text-foreground/70 mb-6 text-lg">
             Still have questions? We're here to help.
           </p>
-          <button className="natural-button">
+          <button className="btn-primary">
             Contact Support
           </button>
         </div>

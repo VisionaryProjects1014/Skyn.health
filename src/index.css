@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display:wght@400&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Skyn.health AI Design System */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display:wght@400&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -156,7 +156,7 @@
 .premium-card {
   @apply rounded-2xl border border-border/50 backdrop-blur-sm;
   @apply hover:shadow-medium hover:scale-[1.02] transition-all duration-300;
-  @apply group cursor-pointer;
+  @apply cursor-pointer;
   box-shadow: var(--shadow-soft);
 }
 
