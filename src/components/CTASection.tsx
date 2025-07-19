@@ -73,7 +73,7 @@ const CTASection = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="bg-white text-primary font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200 hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
               >
                 {isLoading ? 'Joining...' : 'Join the Waitlist'}
               </button>
