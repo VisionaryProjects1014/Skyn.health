@@ -321,25 +321,25 @@ const App = () => {
 
             <div className="card text-center hover-lift">
               <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">SS</span>
+                <span className="text-white text-2xl font-bold">JS</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Sumukh Sharma</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Jaskaran Singh</h3>
               <p className="text-teal-400 mb-4">Co-Founder & CTO</p>
               <p className="text-gray-300 text-sm">
-                Full-stack AI engineer and platform architect. Specializes in scaling ML systems 
-                and building production-ready healthcare technology platforms.
+                Technical architect and systems engineer. Expert in building scalable healthcare 
+                platforms and implementing AI solutions in production environments.
               </p>
             </div>
 
             <div className="card text-center hover-lift">
               <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">JS</span>
+                <span className="text-white text-2xl font-bold">SS</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Jaskaran Singh</h3>
-              <p className="text-blue-400 mb-4">Co-Founder & Head of Product</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Sumukh Sharma</h3>
+              <p className="text-blue-400 mb-4">Co-Founder & CMO</p>
               <p className="text-gray-300 text-sm">
-                Product strategist and healthcare innovation expert. Focused on translating 
-                cutting-edge research into accessible consumer health solutions.
+                Marketing strategist and business development expert. Focused on bringing 
+                cutting-edge AI research to market and building user-centric health solutions.
               </p>
             </div>
           </div>
