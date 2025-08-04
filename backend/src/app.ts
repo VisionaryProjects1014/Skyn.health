@@ -9,6 +9,9 @@ import contactRouter from './routes/contact';
 import newsletterRouter from './routes/newsletter';
 import { errorHandler } from './middleware/errorHandler';
 
+// Initialize database connection
+import './database/database';
+
 dotenv.config();
 
 const app = express();

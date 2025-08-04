@@ -286,6 +286,59 @@
   }
 }
 
+/* Scroll Animations */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in-on-scroll {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-in-on-scroll.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered animations for children */
+.fade-in-on-scroll.visible:nth-child(1) { transition-delay: 0.1s; }
+.fade-in-on-scroll.visible:nth-child(2) { transition-delay: 0.2s; }
+.fade-in-on-scroll.visible:nth-child(3) { transition-delay: 0.3s; }
+.fade-in-on-scroll.visible:nth-child(4) { transition-delay: 0.4s; }
+.fade-in-on-scroll.visible:nth-child(5) { transition-delay: 0.5s; }
+.fade-in-on-scroll.visible:nth-child(6) { transition-delay: 0.6s; }
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -295,5 +348,14 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  
+  .fade-in-on-scroll,
+  .slide-in-left,
+  .slide-in-right,
+  .scale-in-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

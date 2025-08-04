@@ -51,17 +51,12 @@ const Navigation = () => {
                 How It Works
               </button>
               <button
-                onClick={() => scrollToSection('founders')}
+                onClick={() => scrollToSection('team')}
                 className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
               >
                 Team
               </button>
-              <button
-                onClick={() => scrollToSection('blog')}
-                className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
-              >
-                Blog
-              </button>
+
               <button
                 onClick={() => scrollToSection('contact')}
                 className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
@@ -114,17 +109,12 @@ const Navigation = () => {
               How It Works
             </button>
             <button
-              onClick={() => scrollToSection('founders')}
+              onClick={() => scrollToSection('team')}
               className="block w-full text-left px-3 py-2 text-foreground hover:bg-muted rounded-md transition-colors duration-200"
             >
               Team
             </button>
-            <button
-              onClick={() => scrollToSection('blog')}
-              className="block w-full text-left px-3 py-2 text-foreground hover:bg-muted rounded-md transition-colors duration-200"
-            >
-              Blog
-            </button>
+
             <button
               onClick={() => scrollToSection('contact')}
               className="block w-full text-left px-3 py-2 text-foreground hover:bg-muted rounded-md transition-colors duration-200"
