@@ -63,7 +63,7 @@ const App = () => {
               className="w-14 h-14 object-contain transition-all duration-500 ease-out group-hover:scale-110 opacity-95 hover:opacity-100"
             />
             <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent transition-all duration-500 ease-out">
-              Skyn.<span className="italic bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">health</span>
+              Skyn
             </span>
           </div>
 
