@@ -58,7 +58,7 @@ const App = () => {
           {/* Logo at the top */}
           <div className="absolute top-8 left-8 z-20 flex items-center space-x-3 group cursor-pointer">
             <img 
-              src="/src/assets/skyn-logo.png" 
+              src="/skyn-logo.png" 
               alt="Skyn.health Logo" 
               className="w-14 h-14 object-contain transition-all duration-500 ease-out group-hover:scale-110 opacity-95 hover:opacity-100"
             />
@@ -302,7 +302,7 @@ const App = () => {
             {/* Company Name */}
             <div className="flex items-center space-x-3">
               <img 
-                src="/src/assets/skyn-logo.png" 
+                src="/skyn-logo.png" 
                 alt="Skyn.health Logo" 
                 className="w-10 h-10 object-contain opacity-90"
               />
