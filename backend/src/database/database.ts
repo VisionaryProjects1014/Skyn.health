@@ -1,10 +1,17 @@
 import sqlite3 from 'sqlite3';
 import path from 'path';
+import fs from 'fs'; 
 
 // Enable verbose mode for better debugging
 const sqlite = sqlite3.verbose();
 
 // Database file path
+
+const dataDir = path.join(__dirname, '../../../data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
 const dbPath = path.join(__dirname, '../../../data/skyn_health.db');
 
 // Create database connection
