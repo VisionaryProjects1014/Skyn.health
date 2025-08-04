@@ -324,7 +324,7 @@ const App = () => {
               </a>
               
               <a 
-                href="https://github.com/skyn-health" 
+                href="https://github.com/VisionaryProjects1014/Skyn.health" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors duration-300"
