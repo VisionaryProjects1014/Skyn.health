@@ -22,7 +22,7 @@ const App = () => {
     setError('');
 
     try {
-      await api.subscribeNewsletter({ email });
+      const result = await api.subscribeNewsletter({ email });
       setIsSubmitted(true);
       setEmail('');
       
@@ -30,8 +30,13 @@ const App = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    } catch (err) {
-      setError('Failed to subscribe. Please try again.');
+    } catch (err: any) {
+      // Handle specific error cases
+      if (err.message && err.message.includes('already subscribed')) {
+        setError('This email is already subscribed to our newsletter.');
+      } else {
+        setError('Failed to subscribe. Please try again.');
+      }
       console.error('Newsletter subscription error:', err);
     } finally {
       setIsSubmitting(false);

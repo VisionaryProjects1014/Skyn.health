@@ -1,7 +1,7 @@
 const isDevelopment = window.location.hostname === 'localhost';
 const API_BASE_URL = isDevelopment 
   ? 'http://localhost:4000/api' 
-  : 'https://api.skyn.health/api';
+  : 'https://skyn-health.onrender.com/api';
 
 export interface ContactFormData {
   name: string;
@@ -23,11 +23,13 @@ export const api = {
       body: JSON.stringify(data),
     });
     
+    const result = await response.json();
+    
     if (!response.ok) {
-      throw new Error('Failed to submit contact form');
+      throw new Error(result.message || 'Failed to submit contact form');
     }
     
-    return response.json();
+    return result;
   },
 
   async subscribeNewsletter(data: NewsletterData) {
@@ -39,11 +41,13 @@ export const api = {
       body: JSON.stringify(data),
     });
     
+    const result = await response.json();
+    
     if (!response.ok) {
-      throw new Error('Failed to subscribe to newsletter');
+      throw new Error(result.message || 'Failed to subscribe to newsletter');
     }
     
-    return response.json();
+    return result;
   },
 
   async healthCheck() {
