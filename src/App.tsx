@@ -60,11 +60,11 @@ const App = () => {
 
                     {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
-          {/* Logo centered at top */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-3 group cursor-pointer">
+          {/* Logo at the top */}
+          <div className="absolute top-8 left-8 z-20 flex items-center space-x-3 group cursor-pointer">
             <img 
               src="/skyn-logo.png" 
-              alt="Skyn Logo" 
+              alt="Skyn.health Logo" 
               className="w-14 h-14 object-contain transition-all duration-500 ease-out group-hover:scale-110 opacity-95 hover:opacity-100"
             />
             <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent transition-all duration-500 ease-out">
@@ -303,19 +303,19 @@ const App = () => {
       {/* Footer */}
               <footer className="py-12 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center space-y-6">
-            {/* Company Name - Centered */}
+          <div className="flex flex-col items-start space-y-6">
+            {/* Company Name */}
             <div className="flex items-center space-x-3">
               <img 
                 src="/skyn-logo.png" 
-                alt="Skyn Logo" 
+                alt="Skyn.health Logo" 
                 className="w-10 h-10 object-contain opacity-90"
               />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">Skyn</h3>
             </div>
             
-            {/* Social Media Icons - Centered */}
-            <div className="flex space-x-4 justify-center">
+            {/* Social Media Icons */}
+            <div className="flex space-x-4">
               <a 
                 href="https://www.linkedin.com/company/skyn-health/" 
                 target="_blank"
@@ -343,9 +343,9 @@ const App = () => {
           </div>
           
           {/* Copyright */}
-          <div className="mt-8 pt-6 border-t border-gray-200 text-center">
+          <div className="mt-8 pt-6 border-t border-gray-200">
             <p className="text-gray-600 text-sm">
-              © 2024 Skyn. All rights reserved.
+              © 2024 Skyn.health. All rights reserved.
             </p>
           </div>
         </div>
